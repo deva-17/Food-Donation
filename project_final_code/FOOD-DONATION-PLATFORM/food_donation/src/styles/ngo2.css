@@ -1,0 +1,62 @@
+/* ===== NGO PAGE FONT FIX ===== */
+.ngo-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url("../assets/food_donation.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #ffffff;
+  padding-top: 80px;
+
+  /* ✅ DIFFERENT FONT FROM NAVBAR */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Overlay */
+.ngo-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.ngo-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.ngo-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.ngo-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #1f3c88;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.ngo-btn:hover {
+  background-color: #162f6b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}

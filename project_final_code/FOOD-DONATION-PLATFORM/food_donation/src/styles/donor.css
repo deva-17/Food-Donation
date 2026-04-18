@@ -1,0 +1,32 @@
+.donor-container {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("../assets/food_donation.jpeg") center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  color: white;
+  text-align: center;
+}
+
+.donor-container h2 {
+  font-size: 2.5rem;
+}
+
+.donor-btn {
+  padding: 14px 30px;
+  background: #1f3c88;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.donor-btn:hover {
+  background: #162f6b;
+  transform: scale(1.05);
+}

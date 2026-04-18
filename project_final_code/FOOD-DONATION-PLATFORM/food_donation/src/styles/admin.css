@@ -1,0 +1,148 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BACKGROUND ===== */
+.admin-container {
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url("../assets/food_donation.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  color: #ffffff;
+
+  position: relative;
+}
+
+/* OVERLAY */
+.admin-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* CONTENT ABOVE */
+.admin-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE ===== */
+.admin-title {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* ===== STATS ===== */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  width: 240px;
+  padding: 25px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+
+  color: white;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+}
+
+.stat-card h2 {
+  font-size: 2.4rem;
+}
+
+.stat-card p {
+  font-size: 1rem;
+}
+
+/* ===== SECTION ===== */
+.section-title {
+  margin: 35px 0 15px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* ===== GRID ===== */
+.grid-container {
+  width: 90%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD (NEW STYLE) ===== */
+.glass-card {
+  padding: 18px;
+  border-radius: 14px;
+
+  /* 🔥 SOFT MODERN CARD */
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+
+  transition: 0.25s ease;
+}
+
+/* hover */
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+
+  /* subtle highlight */
+  border: 1px solid #38bdf8;
+}
+
+/* TEXT */
+.glass-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #f1f5f9;
+}
+
+/* IMAGE */
+.glass-card img {
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+}

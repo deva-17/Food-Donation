@@ -1,0 +1,271 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+.container {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("../assets/food_donation.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Overlay */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  );
+  z-index: 1;
+}
+
+.container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== COMMON CARD ===== */
+.instructions-card,
+.donation-card {
+  width: 500px;
+  max-width: 95%;
+  padding: 28px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.instructions-card:hover,
+.donation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== HEADINGS ===== */
+.instructions-card h2,
+.donation-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* ===== GUIDELINES ALIGNMENT ===== */
+/* ===== SAFE GUIDELINES STYLE ===== */
+
+.instructions-card {
+  width: 500px;
+  max-width: 95%;
+  overflow: hidden; /* prevents overflow */
+}
+
+/* List */
+.instructions-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Each item */
+.instructions-card li {
+  background: rgba(255,255,255,0.08);
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+
+  display: flex;
+  gap: 8px;
+
+  font-size: 0.9rem;
+  line-height: 1.4;
+
+  word-wrap: break-word;   /* IMPORTANT */
+  overflow-wrap: break-word;
+}
+
+/* Strong text */
+.instructions-card li strong {
+  font-weight: 600;
+}
+/* ===== FORM ===== */
+.donation-card {
+  gap: 15px;
+}
+
+/* ===== HORIZONTAL ROW ===== */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Label */
+.form-row label {
+  width: 130px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1;
+  padding: 12px 14px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+
+  font-size: 0.95rem;
+  color: #000;
+
+  transition: 0.3s;
+}
+
+/* Focus */
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(31, 60, 136, 0.6);
+}
+
+/* Placeholder */
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #333;
+  opacity: 0.8;
+}
+
+/* Textarea */
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* File input */
+input[type="file"] {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 12px;
+
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #1f3c88, #3f6edc);
+  color: white;
+
+  font-weight: 600;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Disabled */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .instructions-card,
+  .donation-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+  }
+}
+
+/* 🔥 IMPROVED INPUT FOCUS */
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.35);
+
+  box-shadow: 0 0 12px rgba(56,189,248,0.7);
+
+  transform: scale(1.01);
+}
+
+/* 🔥 LABEL IMPROVEMENT */
+.form-row label {
+  color: #e2e8f0;
+  letter-spacing: 0.3px;
+}
+
+/* 🔥 INPUT TEXT */
+.form-row input,
+.form-row textarea,
+.form-row select {
+  font-weight: 500;
+}
+
+/* 🔥 BUTTON UPGRADE */
+button {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+button:hover {
+  box-shadow: 0 10px 25px rgba(56,189,248,0.5);
+}
+
+/* 🔥 CARD TITLE */
+.donation-card h2 {
+  font-weight: 600;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
